@@ -3,8 +3,8 @@ import { SketchPicker } from 'react-color'
 import './App.css'
 import LightBulb from './lightbulb'
 import axios from 'axios'
-const TOKEN = 'c7c74e9b14ff949bec26845144dc811ca5e3091dfd1bfce9c27721bbfd5f4786'
-const LIGHT_ID = 'd073d559bfdb'
+const TOKEN = process.env.LIGHT_TOKEN
+const LIGHT_ID = process.env.TOKEN_ID
 
 function App() {
   const [bulbColor, setBulbColor] = useState('#FFD517')
