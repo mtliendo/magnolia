@@ -5,7 +5,7 @@ import LightBulb from './lightbulb'
 import axios from 'axios'
 const TOKEN = process.env.LIGHT_TOKEN
 const LIGHT_ID = process.env.TOKEN_ID
-
+console.log('the env vars', { TOKEN, LIGHT_ID })
 function App() {
   const [bulbColor, setBulbColor] = useState('#FFD517')
   const [color, setColor] = useState('#FFD517')
