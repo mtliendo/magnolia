@@ -3,17 +3,17 @@ import { SketchPicker } from 'react-color'
 import './App.css'
 import LightBulb from './lightbulb'
 import axios from 'axios'
-const TOKEN = process.env.LIGHT_TOKEN
-const LIGHT_ID = process.env.TOKEN_ID
+const TOKEN = process.env.REACT_APP_LIGHT_TOKEN
+const LIGHT_ID = process.env.REACT_APP_TOKEN_ID
 console.log('the env vars', { TOKEN, LIGHT_ID })
 function App() {
   const [bulbColor, setBulbColor] = useState('#FFD517')
   const [color, setColor] = useState('#FFD517')
-
+  // the quick brown fox jumped over the lazy dog
   const handleColorChange = (color) => {
     setColor(color.hex)
   }
-
+  // the quick brown jumped over the lazy dog
   const handleButtonClick = async () => {
     setBulbColor(color)
     axios({
