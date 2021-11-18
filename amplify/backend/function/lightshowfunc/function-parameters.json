@@ -1,0 +1,12 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "lightId",
+      "environmentVariableName": "LIGHT_ID"
+    }
+  ],
+  "secretNames": [
+    "LIGHT_API_KEY"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "paths": [
+    {
+      "name": "/update-light",
+      "lambdaFunction": "lightshowfunc",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/PUT",
+          "/PATCH"
+        ]
+      },
+      "policyResourceName": "/update-light"
+    }
+  ],
+  "resourceName": "lightshowapi",
+  "apiName": "lightshowapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "lightshowfunc"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-lightshow-dev-101954-authRole",
+    "unAuthRoleName": "amplify-lightshow-dev-101954-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "lightshowfunc",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
