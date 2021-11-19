@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { SketchPicker } from 'react-color'
 import './App.css'
 import LightBulb from './lightbulb'
-import API from 'aws-amplify'
+import axios from 'axios'
 
 function App() {
 	const [bulbColor, setBulbColor] = useState('#FFD517')
@@ -14,9 +14,16 @@ function App() {
 
 	const handleButtonClick = async () => {
 		setBulbColor(color)
-		await API.post('lightshow', '/update-light', {
-			body: { color },
-		})
+		axios({
+			method: 'put',
+			url: `https://api.lifx.com/v1/lights/id:${process.env.REACT_APP_LIGHT_ID}/state`,
+			headers: {
+				Authorization: `Bearer ${process.env.REACT_APP_LIGHT_API_KEY}`,
+			},
+			data: {
+				color,
+			},
+		}).catch((e) => console.log(e))
 	}
 
 	return (
