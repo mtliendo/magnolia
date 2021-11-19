@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lightshow-dev-170926-authRole",
+      "UnauthRoleArn": "arn:aws:iam::936471194299:role/amplify-lightshow-dev-170926-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::936471194299:role/amplify-lightshow-dev-170926-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lightshow-dev-170926-deployment",
+      "UnauthRoleName": "amplify-lightshow-dev-170926-unauthRole",
+      "StackName": "amplify-lightshow-dev-170926",
+      "StackId": "arn:aws:cloudformation:us-east-1:936471194299:stack/amplify-lightshow-dev-170926/bf820b70-498d-11ec-9a31-0a50ef48408f",
+      "AmplifyAppId": "d37qgl77e7b4oj"
+    },
+    "categories": {
+      "auth": {
+        "lightshow999d4fb9": {}
+      }
+    }
+  }
+}

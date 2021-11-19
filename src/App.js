@@ -3,6 +3,7 @@ import { SketchPicker } from 'react-color'
 import './App.css'
 import LightBulb from './lightbulb'
 import axios from 'axios'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
 function App() {
 	const [bulbColor, setBulbColor] = useState('#FFD517')
@@ -52,4 +53,4 @@ const MainContainer = ({ children }) => (
 	</div>
 )
 
-export default App
+export default withAuthenticator(App)
