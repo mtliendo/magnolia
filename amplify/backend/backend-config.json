@@ -1,6 +1,6 @@
 {
   "auth": {
-    "lightshowd4e81427": {
+    "lightshow3176035e": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

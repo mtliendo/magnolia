@@ -24,8 +24,8 @@
   "privacy": {
     "auth": 1,
     "unauth": 0,
-    "authRoleName": "amplify-lightshow-dev-101954-authRole",
-    "unAuthRoleName": "amplify-lightshow-dev-101954-unauthRole"
+    "authRoleName": "amplify-lightshow-dev-12339-authRole",
+    "unAuthRoleName": "amplify-lightshow-dev-12339-unauthRole"
   },
   "dependsOn": [
     {
