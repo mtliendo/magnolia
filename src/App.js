@@ -14,9 +14,14 @@ function App() {
 
 	const handleButtonClick = async () => {
 		setBulbColor(color)
-		await API.post('lightshow', '/update-light', {
-			body: { color },
-		})
+
+		fetch(
+			'https://mvhfzmq7tju5okvobyl3dl7elu0agaqs.lambda-url.us-east-1.on.aws/',
+			{
+				body: JSON.stringify({ color }),
+				method: 'post',
+			}
+		)
 	}
 
 	return (

@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.4.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"8.0.1\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -14,12 +14,6 @@
       "Type": "String"
     },
     "s3Key": {
-      "Type": "String"
-    },
-    "lightId": {
-      "Type": "String"
-    },
-    "secretsPathAmplifyAppId": {
       "Type": "String"
     }
   },
@@ -53,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "lightshowfunc",
+            "twitchlights9106a6a2",
             {
               "Fn::Join": [
                 "",
                 [
-                  "lightshowfunc",
+                  "twitchlights9106a6a2",
                   "-",
                   {
                     "Ref": "env"
@@ -75,31 +69,6 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
-            },
-            "LIGHT_ID": {
-              "Ref": "lightId"
-            },
-            "LIGHT_API_KEY": {
-              "Fn::Join": [
-                "",
-                [
-                  {
-                    "Fn::Sub": [
-                      "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
-                      {
-                        "appId": {
-                          "Ref": "secretsPathAmplifyAppId"
-                        },
-                        "env": {
-                          "Ref": "env"
-                        },
-                        "functionName": "lightshowfunc"
-                      }
-                    ]
-                  },
-                  "LIGHT_API_KEY"
-                ]
-              ]
             }
           }
         },
@@ -120,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "lightshowLambdaRole09f42c68",
+            "twitchlightsLambdaRole564361e5",
             {
               "Fn::Join": [
                 "",
                 [
-                  "lightshowLambdaRole09f42c68",
+                  "twitchlightsLambdaRole564361e5",
                   "-",
                   {
                     "Ref": "env"
@@ -195,63 +164,6 @@
           ]
         }
       }
-    },
-    "AmplifyFunctionSecretsPolicy": {
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "amplify-function-secrets-policy",
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ],
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "ssm:GetParameter",
-                "ssm:GetParameters"
-              ],
-              "Resource": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:aws:ssm:",
-                    {
-                      "Ref": "AWS::Region"
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId"
-                    },
-                    ":parameter",
-                    {
-                      "Fn::Sub": [
-                        "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
-                        {
-                          "appId": {
-                            "Ref": "secretsPathAmplifyAppId"
-                          },
-                          "env": {
-                            "Ref": "env"
-                          },
-                          "functionName": "lightshowfunc"
-                        }
-                      ]
-                    },
-                    "*"
-                  ]
-                ]
-              }
-            }
-          ]
-        }
-      },
-      "DependsOn": [
-        "LambdaExecutionRole"
-      ]
     }
   },
   "Outputs": {

@@ -1,27 +1,21 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-lightshow-dev-101954-authRole",
-      "UnauthRoleArn": "arn:aws:iam::521776702104:role/amplify-lightshow-dev-101954-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::521776702104:role/amplify-lightshow-dev-101954-authRole",
+      "AuthRoleName": "amplify-twitchlights-dev-111132-authRole",
+      "UnauthRoleArn": "arn:aws:iam::311853295989:role/amplify-twitchlights-dev-111132-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::311853295989:role/amplify-twitchlights-dev-111132-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-lightshow-dev-101954-deployment",
-      "UnauthRoleName": "amplify-lightshow-dev-101954-unauthRole",
-      "StackName": "amplify-lightshow-dev-101954",
-      "StackId": "arn:aws:cloudformation:us-east-1:521776702104:stack/amplify-lightshow-dev-101954/5fe526f0-488b-11ec-b837-0a39f43dc539",
-      "AmplifyAppId": "d1yd7xpdewj1i5",
-      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-lightshow-dev-101954-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+      "DeploymentBucketName": "amplify-twitchlights-dev-111132-deployment",
+      "UnauthRoleName": "amplify-twitchlights-dev-111132-unauthRole",
+      "StackName": "amplify-twitchlights-dev-111132",
+      "StackId": "arn:aws:cloudformation:us-east-1:311853295989:stack/amplify-twitchlights-dev-111132/6269f350-bffb-11ec-8bd2-0ec26fe3b6f9",
+      "AmplifyAppId": "d1a08acd0ut5r8"
     },
     "categories": {
-      "auth": {
-        "lightshowd4e81427": {}
-      },
       "function": {
-        "lightshowfunc": {
-          "lightId": "d073d55a3d57",
-          "secretsPathAmplifyAppId": "d1yd7xpdewj1i5",
-          "deploymentBucketName": "amplify-lightshow-dev-101954-deployment",
-          "s3Key": "amplify-builds/lightshowfunc-315532692f7337594448-build.zip"
+        "twitchlights9106a6a2": {
+          "deploymentBucketName": "amplify-twitchlights-dev-111132-deployment",
+          "s3Key": "amplify-builds/twitchlights9106a6a2-6763762f306333624259-build.zip"
         }
       }
     }
